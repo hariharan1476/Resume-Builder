@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Builder</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.container {
+
+    background: white;
+    padding: 30px;
+
+    width: 400px;
+    max-width: 90%;
+
+    border-radius: 15px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+
+    width: 100%;
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border-radius: 8px;
+    border: 1px solid #ccc;
+
+    font-size: 14px;
+
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    background: #667eea;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+
+    background: #5a67d8;
+
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Resume Builder</h2>
+
+<input id="name" placeholder="Full Name">
+
+<input id="email" placeholder="Email">
+
+<input id="phone" placeholder="Phone">
+
+<textarea id="skills" placeholder="Skills"></textarea>
+
+<textarea id="education" placeholder="Education"></textarea>
+
+<textarea id="experience" placeholder="Experience"></textarea>
+
+<button onclick="generatePDF()">Generate Resume PDF</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
